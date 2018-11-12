@@ -26,8 +26,7 @@
 										height="600px" />
 
 								</Carousel>
-								<Button text="{i18n>
-									showHelloButtonText}"
+								<Button text="{i18n>showHelloButtonText}"
 									press="onShowHello" />
 									<Input value="{helloPanel>/recipient/name}"
 										description="Hello {helloPanel>/recipient/name}"
@@ -84,7 +83,18 @@
 										<ObjectListItem
 											title="{Name}"
 											number="{Price}"
-											intro="{ProductID}" />
+											numberState="{= ${Price} > 500 ? 'Error' : 'Success'}"
+											intro="{ProductID}" >
+											<firstStatus>
+													<ObjectStatus text="{
+														parts: [
+															{path: 'WeightUnit'},
+															{path: 'WeightMeasure'}
+														],
+														formatter : '.formatter.delivery'
+													}"/>
+											</firstStatus>
+										</ObjectListItem>
 									</items>
 								</List>
 							</content>
