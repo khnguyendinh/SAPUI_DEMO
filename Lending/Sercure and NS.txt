@@ -1,0 +1,5 @@
+GetOverDraftAccountForSettlement  sercure
+GetAccounts  sercure
+GetAccounts sercure
+action=verify  sercure
+Overdrafts?action=confirm sercure
